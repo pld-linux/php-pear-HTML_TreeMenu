@@ -1,16 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		HTML
 %define		_subclass	TreeMenu
+%define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - provides an api to create a HTML tree
 Summary(pl):	%{_pearname} - dostarcza API do tworzenia drzew HTML
 Name:		php-pear-%{_pearname}
-Version:	1.1.0
+Version:	1.1.5
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-URL:		http://pear.php.net/
+# Source0-md5:	d09715236b3016ba3e3d71a4a6804079
+URL:		http://pear.php.net/package/%{_pearname}/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
 Provides:	pear(TreeMenu)
@@ -28,6 +30,8 @@ IE6 however. Other browsers display the tree fully expanded. Each node
 can have an optional link and icon. An example of this in action is
 available at http://www.phpguru.org/treemenu.php .
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 To oparte na PHP API tworzy strukturê drzewa przy u¿yciu zestawu
 ma³ych klas PHP. Drzewo to mo¿e byæ przekonwertowane do JavaScriptu
@@ -37,6 +41,8 @@ rozga³êzieñ) w IE 5 lub nowszym, ale by³o to testowane tylko w IE 6.
 Inne przegl±darki wy¶wietlaj± drzewo w pe³ni rozwiniête. Ka¿dy li¶æ
 mo¿e mieæ opcjonalny odno¶nik i ikonkê. Przyk³ad takiego dzia³ania
 jest dostêpny pod adresem http://www.phpguru.org/treemenu.php .
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
