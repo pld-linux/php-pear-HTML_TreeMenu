@@ -3,15 +3,16 @@
 %define		_subclass	TreeMenu
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
+
 Summary:	%{_pearname} - provides an api to create a HTML tree
 Summary(pl):	%{_pearname} - dostarcza API do tworzenia drzew HTML
 Name:		php-pear-%{_pearname}
-Version:	1.1.7
+Version:	1.1.9
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	b8f183ddbc6707d0caceb1dfe2f12af4
+# Source0-md5:	88007ab29ac389ecc607c872de3ce684
 URL:		http://pear.php.net/package/HTML_TreeMenu/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
