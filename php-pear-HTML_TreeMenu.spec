@@ -51,7 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{php_pear_dir}/%{_class}/{images,imagesAlt}
+%dir %{php_pear_dir}/%{_class}/images
+%dir %{php_pear_dir}/%{_class}/imagesAlt
 %doc %{_pearname}-%{version}/docs/*
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/*.js
