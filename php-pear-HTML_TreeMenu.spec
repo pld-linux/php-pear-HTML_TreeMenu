@@ -5,8 +5,8 @@
 Summary:	%{_class}_%{_subclass} - provides an api to create a HTML tree
 Summary(pl):	%{_class}_%{_subclass} - dostarcza API do tworzenia drzew HTML
 Name:		php-pear-%{_pearname}
-Version:	1.0.3
-Release:	2
+Version:	1.0.4
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -54,9 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc %{_pearname}-%{version}/docs/*
 %dir %{php_pear_dir}/%{_class}/images
 %dir %{php_pear_dir}/%{_class}/imagesAlt
-%doc %{_pearname}-%{version}/docs/*
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/*.js
 %{php_pear_dir}/%{_class}/images/*
