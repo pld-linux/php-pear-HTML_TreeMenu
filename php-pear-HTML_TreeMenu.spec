@@ -29,7 +29,7 @@ IE6 however. Other browsers display the tree fully expanded. Each node
 can have an optional link and icon. An example of this in action is
 available at http://www.phpguru.org/treemenu.php .
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 To oparte na PHP API tworzy strukturê drzewa przy u¿yciu zestawu
