@@ -40,13 +40,11 @@ jest dostêpny pod adresem http://www.phpguru.org/treemenu.php .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd %{_pearname}-%{version}
-
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{images,imagesAlt}
 
-install *.{php,js}		$RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/
-install images/*		$RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/images
-install imagesAlt/*		$RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/imagesAlt
+install %{_pearname}-%{version}/*.{php,js} $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/
+install %{_pearname}-%{version}/images/* $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/images
+install %{_pearname}-%{version}/imagesAlt/* $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/imagesAlt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
