@@ -2,8 +2,8 @@
 %define		_class		HTML
 %define		_subclass	TreeMenu
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_class}_%{_subclass} - provides an api to create a HTML tree
-Summary(pl):	%{_class}_%{_subclass} - dostarcza API do tworzenia drzew HTML
+Summary:	%{_pearname} - provides an api to create a HTML tree
+Summary(pl):	%{_pearname} - dostarcza API do tworzenia drzew HTML
 Name:		php-pear-%{_pearname}
 Version:	1.0.4
 Release:	1
