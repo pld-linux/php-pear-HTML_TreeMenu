@@ -5,14 +5,16 @@
 Summary:	%{_pearname} - provides an api to create a HTML tree
 Summary(pl):	%{_pearname} - dostarcza API do tworzenia drzew HTML
 Name:		php-pear-%{_pearname}
-Version:	1.0.4
-Release:	2
+Version:	1.1.0
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
+Provides:	pear(TreeMenu)
+Provides:	pear(TreeNode)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,11 +43,12 @@ jest dostêpny pod adresem http://www.phpguru.org/treemenu.php .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{images,imagesAlt}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{images,imagesAlt{,2}}
 
 install %{_pearname}-%{version}/*.{php,js} $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/
 install %{_pearname}-%{version}/images/* $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/images
 install %{_pearname}-%{version}/imagesAlt/* $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/imagesAlt
+install %{_pearname}-%{version}/imagesAlt2/* $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/imagesAlt2
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,7 +58,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_pearname}-%{version}/docs/*
 %dir %{php_pear_dir}/%{_class}/images
 %dir %{php_pear_dir}/%{_class}/imagesAlt
+%dir %{php_pear_dir}/%{_class}/imagesAlt2
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/*.js
 %{php_pear_dir}/%{_class}/images/*
 %{php_pear_dir}/%{_class}/imagesAlt/*
+%{php_pear_dir}/%{_class}/imagesAlt2/*
