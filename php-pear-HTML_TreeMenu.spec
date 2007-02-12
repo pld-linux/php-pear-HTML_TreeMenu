@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - provides an api to create a HTML tree
-Summary(pl):	%{_pearname} - dostarcza API do tworzenia drzew HTML
+Summary(pl.UTF-8):   %{_pearname} - dostarcza API do tworzenia drzew HTML
 Name:		php-pear-%{_pearname}
 Version:	1.2.0
 Release:	2
@@ -33,15 +33,15 @@ available at <http://www.phpguru.org/treemenu.php>.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-To oparte na PHP API tworzy strukturê drzewa przy u¿yciu zestawu
-ma³ych klas PHP. Drzewo to mo¿e byæ przekonwertowane do JavaScriptu
-przy u¿yciu metody printMenu(). Drzewo powinno byæ dynamiczne w: IE 4
-lub nowszym oraz NN6/Mozilli; zachowuje stan (zwiniêcie/rozwiniêcie
-rozga³êzieñ) w IE 5 lub nowszym, ale by³o to testowane tylko w IE 6.
-Inne przegl±darki wy¶wietlaj± drzewo w pe³ni rozwiniête. Ka¿dy li¶æ
-mo¿e mieæ opcjonalny odno¶nik i ikonkê. Przyk³ad takiego dzia³ania
-jest dostêpny pod adresem <http://www.phpguru.org/treemenu.php>.
+%description -l pl.UTF-8
+To oparte na PHP API tworzy strukturÄ™ drzewa przy uÅ¼yciu zestawu
+maÅ‚ych klas PHP. Drzewo to moÅ¼e byÄ‡ przekonwertowane do JavaScriptu
+przy uÅ¼yciu metody printMenu(). Drzewo powinno byÄ‡ dynamiczne w: IE 4
+lub nowszym oraz NN6/Mozilli; zachowuje stan (zwiniÄ™cie/rozwiniÄ™cie
+rozgaÅ‚Ä™zieÅ„) w IE 5 lub nowszym, ale byÅ‚o to testowane tylko w IE 6.
+Inne przeglÄ…darki wyÅ›wietlajÄ… drzewo w peÅ‚ni rozwiniÄ™te. KaÅ¼dy liÅ›Ä‡
+moÅ¼e mieÄ‡ opcjonalny odnoÅ›nik i ikonkÄ™. PrzykÅ‚ad takiego dziaÅ‚ania
+jest dostÄ™pny pod adresem <http://www.phpguru.org/treemenu.php>.
 
 Ta klasa ma w PEAR status: %{_status}.
 
