@@ -1,18 +1,15 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		HTML
-%define		_subclass	TreeMenu
 %define		_status		stable
-%define		_pearname	%{_class}_%{_subclass}
-
+%define		_pearname	HTML_TreeMenu
 Summary:	%{_pearname} - provides an api to create a HTML tree
 Summary(pl.UTF-8):	%{_pearname} - dostarcza API do tworzenia drzew HTML
 Name:		php-pear-%{_pearname}
-Version:	1.2.1
+Version:	1.2.2
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	6f2693c215555b637a7b643548e81dfb
+# Source0-md5:	cbee56b26e8ae80e541a12902bf7ea95
 URL:		http://pear.php.net/package/HTML_TreeMenu/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -48,13 +45,13 @@ Ta klasa ma w PEAR status: %{_status}.
 %prep
 %pear_package_setup
 
-install -d docs/%{_pearname}
-mv ./%{php_pear_dir}/%{_class}/docs/* docs/%{_pearname}
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
+
+# tests should not be packaged
+%{__rm} -r $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -64,6 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
+%{php_pear_dir}/HTML/*.php
 
 %{php_pear_dir}/data/%{_pearname}
