@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		stable
 %define		_pearname	HTML_TreeMenu
 Summary:	%{_pearname} - provides an api to create a HTML tree
